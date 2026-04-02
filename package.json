@@ -1,11 +1,13 @@
 {
-  "name": "backpetro",
-  "version": "1.0.0",
-  "description": "",
-  "type": "module",
-  "dependencies": {
-    
-    "nodemailer": "^8.0.4"
-  }
- 
+  "version": "2",
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
+      ]
+    }
+  ]
 }
